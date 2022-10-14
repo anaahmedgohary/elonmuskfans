@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+.svgimg{
+  fill: red;
+  color: green;
+  background-color: blue;
+}
