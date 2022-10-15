@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ultra&display=swap");
 header {
   background-image: url(./images/elon-musk02.jpg);
   opacity: 0.9;
@@ -7,6 +9,7 @@ header {
   background-blend-mode: multiply;
   background-attachment: fixed;
   background-repeat: "no-repeat";
+  background-position: center;
   background-size: cover;
   fill: red;
   border: solid;
@@ -84,136 +87,136 @@ header {
 }
 
 .about-block {
-  margin-right: auto;
-  margin-left: 10%;
-  margin-top: 7%;
-  width: 50%;
+  position: absolute;
+  z-index: 0;
+  bottom: 0%;
+  left: 0%;
+  display: grid;
+  grid-template-columns: 2% 1fr 2%;
+  grid-template-rows: 4rem 1fr;
   min-width: 300px;
+  width: 100%;
   overflow: hidden;
-  max-height: 82vh;
+  max-height: 100vh;
 }
 .about-block .title-div {
   color: white;
+  grid-column: 2/3;
+  max-height: 4rem;
+  display: grid;
+  align-items: center;
 }
 .about-block .title-div .title {
   text-align: left;
+  font-family: "Pacifico", cursive;
+  color: rgb(235, 43, 53);
 }
 .about-block .paragraph-div {
+  grid-column: 2/3;
   color: skyblue;
-  font-size: 3rem;
   font-weight: bolder;
+  min-height: 100%;
+  max-width: 100%;
 }
 .about-block .paragraph-div .paragraph {
-  width: 94%;
-  margin: auto;
+  align-items: center;
+  font-size: 2rem;
+  min-height: 20rem;
+  height: 100%;
+  min-width: 300px;
+  max-width: 600px;
+  margin-inline: left;
   text-align: left;
 }
-.about-block .paragraph-div .paragraph .first-letter {
+.about-block .paragraph-div .paragraph::first-letter {
+  color: red;
   text-align: left;
-  font-size: 18rem;
-  line-height: 11rem;
+  font-size: 14rem;
+  line-height: 10rem;
   float: left;
 }
-
-#toggle-nav-vert {
-  display: none;
+.about-block .paragraph-div .paragraph .charachs {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 20px;
+  font-family: "Ultra", serif;
+  color: rgb(255, 255, 255);
 }
 
 @media only screen and (max-width: 949px) {
-  #toggle-nav-vert {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    width: 50px;
-    height: 50px;
-    font-size: 4rem;
-    margin-left: auto;
-    margin-right: 10%;
-    padding-bottom: 0.8rem;
-  }
-  .list-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: red;
-    min-width: 300px;
-    width: 40vw;
-    margin: auto;
+  .line-nav {
     display: none;
   }
-  .logo-hdr {
-    margin-right: auto;
+}
+.companies-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 9%;
+  bottom: 0%;
+  min-width: 500px;
+  max-width: 50%;
+  min-height: 60vh;
+  z-index: 0;
+}
+.companies-div .comp-gall {
+  margin-left: auto;
+  margin-top: auto;
+  max-width: 300px;
+}
+.companies-div .comp-gall .comp-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0;
+  min-height: 20rem;
+  width: 100%;
+  margin: 0;
+  border: solid;
+  border-radius: 6px;
+  background-color: rgb(30, 30, 30);
+}
+.companies-div .comp-gall .comp-list .a-company .Neuralink {
+  background-color: red;
+}
+.companies-div .comp-gall .comp-list .a-company .com-img1 {
+  width: 60px;
+}
+.companies-div .comp-gall .comp-list .a-company .com-img2 {
+  width: 40px;
+}
+.companies-div .comp-gall .comp-list .a-company .com-img3 {
+  width: 240px;
+}
+.companies-div .comp-gall .comp-list .a-company .com-img4 {
+  width: 120px;
+}
+
+@media screen and (max-width: 820px) {
+  .companies-div {
+    display: none;
   }
-  .logo-hdr a {
-    margin: auto;
-    margin-right: auto;
-    max-width: 92px;
-    max-height: 5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-  }
-  .logo-hdr a img {
-    min-width: 100px;
-  }
-  .nav-hdr {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    width: 100%;
-    margin: auto;
-    justify-self: center;
-    align-self: center;
-  }
-  .nav-hdr .nav-links {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding-block: 20rem;
-    margin-top: 8%;
-    max-width: 100%;
-    margin-inline: auto;
-    gap: 20px;
-    padding: 0;
-  }
-  .nav-hdr .nav-links .join-btn {
-    margin: auto;
-    border: solid white;
-  }
-  .nav-hdr .nav-links .join-btn a {
-    text-decoration: none;
-    color: white;
-    font-family: "Lobster", cursive;
-    font-weight: bolder;
-    font-size: 1.3rem;
-  }
-  .nav-hdr .nav-links .nav-link {
-    border: solid white;
-    border-radius: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: auto;
-    padding: 0;
-  }
-  .nav-hdr .nav-links .nav-link a {
-    border: none;
-    text-decoration: none;
-    display: grid;
-    place-items: center;
-    color: black;
-    font-family: "Roboto Slab", serif;
-    font-size: 1rem;
-    transition: all 700ms;
-    height: unset;
-    padding-inline: 1rem;
-    padding-block: 1rem;
-  }
-  .nav-hdr .nav-links .nav-link a:hover {
-    padding-inline: 0rem;
-  }
+}
+#companie-btn-div {
+  position: absolute;
+  right: 6.9%;
+  top: 20%;
+  border: white;
+}
+#companie-btn-div #companie-btn {
+  width: 100px;
+  background: silver;
+  fill: green;
+  color: white;
+  padding: 18%;
+  width: 60px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
 }/*# sourceMappingURL=headr.css.map */

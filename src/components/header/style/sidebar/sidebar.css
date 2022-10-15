@@ -1,0 +1,139 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+.list-nav {
+  position: absolute;
+  top: 0;
+  right: 0%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: red;
+  min-height: 90vh;
+  min-width: 300px;
+  width: 40vw;
+  margin: auto;
+}
+.list-nav .logo-bar {
+  color: white;
+}
+.list-nav .logo-bar a {
+  margin: auto;
+  max-width: 92px;
+  max-height: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.list-nav .logo-bar a img {
+  min-width: 100px;
+}
+.list-nav .nav-bar {
+  width: 100%;
+  height: 100%;
+  padding-top: 12%;
+  padding-bottom: 5%;
+}
+.list-nav .nav-bar .bar-links {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 0;
+  list-style: none;
+}
+.list-nav .nav-bar .bar-links .join-btn-bar {
+  border: solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-family: "Lobster", cursive;
+  font-weight: bolder;
+  font-size: 1.3rem;
+}
+.list-nav .nav-bar .bar-links .bar-link {
+  border: solid white;
+  border-radius: 800px 50px;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.list-nav .nav-bar .bar-links .bar-link a {
+  background-color: rgb(42, 108, 182);
+  padding-inline: 1rem;
+  width: 8rem;
+  border-radius: 800px 50px;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-family: "Roboto Slab", serif;
+  font-size: 1.2rem;
+  transition: all 700ms;
+  height: 100%;
+}
+.list-nav .nav-bar .bar-links .bar-link a:hover {
+  background-color: rgba(255, 0, 0, 0.6);
+  padding-inline: 1rem;
+}
+
+#toggle-nav-vert {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.chngeMenuebtn .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+.chngeMenuebtn .bar2 {
+  opacity: 0;
+}
+.chngeMenuebtn .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+@media only screen and (max-width: 949px) {
+  #toggle-nav-vert {
+    position: absolute;
+    top: 1%;
+    right: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 5px;
+    border-radius: 8px;
+    background-color: rgb(106, 147, 185);
+    width: 50px;
+    height: 50px;
+    font-size: 4rem;
+    z-index: 2;
+    transition: all 500ms;
+  }
+  #toggle-nav-vert:hover {
+    background-color: rgb(4, 60, 113);
+  }
+  #toggle-nav-vert:hover div {
+    background-color: rgba(210, 183, 30, 0.787);
+  }
+  #toggle-nav-vert div {
+    color: black;
+    height: 0.4rem;
+    width: 70%;
+    background-color: black;
+    border-radius: 50px 50px;
+    transition: all 500ms;
+  }
+}/*# sourceMappingURL=sidebar.css.map */
