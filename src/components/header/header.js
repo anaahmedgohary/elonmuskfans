@@ -27,7 +27,8 @@ const Header = () =>
         {
             if ($(window).width() > 949)
             {
-                $('.list-nav').hide();
+                $('.list-nav').addClass("hidden");
+                $('#toggle-nav-vert').removeClass("chngeMenuebtn");
             }
             
         }
@@ -49,11 +50,10 @@ const Header = () =>
     function showNav(e)
     {
         //$('.bar-links').slideToggle(500);
-
-        $('.list-nav').toggleClass("hidden");
         
-        $('.bar-link').hide()
-            $('.bar-link').slideToggle(500);
+        $('.list-nav').toggleClass("hidden");
+        $('.bar-link').slideToggle(1)
+        $('.bar-link').slideToggle(500);
             
             
         
